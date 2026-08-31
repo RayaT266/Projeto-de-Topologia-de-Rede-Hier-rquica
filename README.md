@@ -2,6 +2,9 @@
 
 Este repositório contém os projetos, desafios e anotações que estou desenvolvendo ao longo do curso de cibersegurança do projeto **Mulheres Digitais** da JA.
 
+
+
+
 ## 📚 Conteúdos abordados
 
 - Fundamentos de cibersegurança  
