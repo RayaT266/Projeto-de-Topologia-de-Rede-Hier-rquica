@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulher Digital - Cibersegurança</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="triângulo.png">
+</head>
+<body>
+<div class="overlay">
+  <div class="container">
+    <header>
+      <h1>🔐 Mulher Digital</h1>
+      <div class="subtitulo">Cibersegurança — Projeto JA Brasil</div>
+      <div class="logo-area">
+        <span>Junior Achievement Americas</span> • 
+        <span>Junior Achievement Brasil</span> • 
+        <span>Member of JA Worldwide</span>
+      </div>
+    </header>
+
+    <nav>
+      <button class="nav-btn ativo" data-pagina="inicio">🏠 Início</button>
+      <button class="nav-btn" data-pagina="modulos">📚 Módulos</button>
+    </nav>
+
+    <!-- Página Início -->
+    <div id="inicio" class="pagina ativa">
+      <div class="inicio-texto">
+        <h2>✨ Bem-vinda à minha jornada</h2>
+        <p>Este espaço reúme meus projetos, desafios e aprendizados no curso de <strong>Cibersegurança</strong> do projeto <strong>Mulheres Digitais (JA)</strong>.</p>
+        <p>Explore os 5 módulos, conheça os conteúdos e acompanhe minha evolução na área de segurança cibernética.</p>
+        <div style="margin-top: 25px;">
+          <button class="nav-btn" data-pagina="modulos" style="background: #b8956e; color: white;">Ver Módulos →</button>
+       <br>
+
+          <p>Este repositório contém os projetos, desafios e anotações desenvolvidos ao longo do curso de cibersegurança do projeto <strong>Mulheres Digitais</strong> da JA.</p>
+<br>
+  <h2>📚 Conteúdos abordados</h2>
+  <ul>
+    <li>Fundamentos de cibersegurança</li>
+    <li>Identificação e análise de vulnerabilidades</li>
+    <li>Segurança em redes e sistemas</li>
+    <li>Práticas de autenticação e controle de acesso</li>
+    <li>Boas práticas de proteção de dados</li>
+  </ul>
+
+  <h2>🗂️ Estrutura do repositório</h2>
+  <table>
+    <thead>
+      <tr><th>Diretório</th><th>Descrição</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>/projetos</code></td><td>Desafios práticos do curso</td></tr>
+      <tr><td><code>/anotacoes</code></td><td>Resumos e conceitos fundamentais</td></tr>
+      <tr><td><code>/laboratorios</code></td><td>Simulações e testes em ambientes controlados</td></tr>
+    </tbody>
+  </table>
+
+  <h2>🚀 Em desenvolvimento</h2>
+  <p>Acompanhamento do módulo de cibersegurança do programa <strong>Mulheres Digitais (JA)</strong>,   
+    com ênfase na aprendizagem prática e na construção contínua do portfólio profissional.</p>
+       
+        </div>
+      </div>
+    </div>
+
+    <!-- Página Módulos -->
+    <div id="modulos" class="pagina">
+      <div class="cards-modulos">
+        <div class="card" data-modulo="1">
+          <div class="card-badge">Módulo 1</div>
+          <h3>Introdução</h3>
+          <p>Fundamentos da cibersegurança, conceitos básicos e importância no mundo digital.</p>
+        </div>
+        <div class="card" data-modulo="2">
+          <div class="card-badge">Módulo 2</div>
+          <h3>Ataque, Conceitos e Técnicas</h3>
+          <p>Principais tipos de ataques, vetores de ameaça e como funcionam na prática.</p>
+        </div>
+        <div class="card" data-modulo="3">
+          <div class="card-badge">Módulo 3</div>
+          <h3>Protegendo seus dados e privacidade</h3>
+          <p>Boas práticas, criptografia, autenticação e defesa pessoal.</p>
+        </div>
+        <div class="card" data-modulo="4">
+          <div class="card-badge">Módulo 4</div>
+          <h3>Protegendo a Organização</h3>
+          <p>Segurança corporativa, políticas de acesso e resposta a incidentes.</p>
+        </div>
+        <div class="card" data-modulo="5">
+          <div class="card-badge">Módulo 5</div>
+          <h3>O seu futuro na segurança cibernética?</h3>
+          <p>Carreiras, certificações e próximos passos na área.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Mulheres Digitais (JA) • Cibersegurança • Portfólio em construção
+    </footer>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-titulo"></h2>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
+<script>
+  // Navegação entre páginas
+  const botoes = document.querySelectorAll('.nav-btn');
+  const paginas = document.querySelectorAll('.pagina');
+
+  botoes.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const paginaId = btn.getAttribute('data-pagina');
+      
+      botoes.forEach(b => b.classList.remove('ativo'));
+      btn.classList.add('ativo');
+      
+      paginas.forEach(pag => pag.classList.remove('ativa'));
+      document.getElementById(paginaId).classList.add('ativa');
+    });
+  });
+
+  // Modal com detalhes dos módulos
+  const modal = document.getElementById('modal');
+  const modalTitulo = document.getElementById('modal-titulo');
+  const modalDesc = document.getElementById('modal-desc');
+  const closeModal = document.querySelector('.close');
+
+  const modulosDetalhes = {
+    1: {
+      titulo: '📘 Módulo 1: Introdução',
+      desc: 'Fundamentos da cibersegurança: confidencialidade, integridade, disponibilidade. Importância da segurança digital no contexto atual.'
+    },
+    2: {
+      titulo: '⚔️ Módulo 2: Ataque, Conceitos e Técnicas',
+      desc: 'Phishing, engenharia social, malware, ransomware. Como os ataques são planejados e executados.'
+    },
+    3: {
+      titulo: '🔒 Módulo 3: Protegendo seus dados e privacidade',
+      desc: 'Criptografia, autenticação multifator, gerenciamento de senhas. Proteção de dados pessoais na internet.'
+    },
+    4: {
+      titulo: '🏢 Módulo 4: Protegendo a Organização',
+      desc: 'Políticas de segurança, controle de acesso, resposta a incidentes. Segurança corporativa e compliance.'
+    },
+    5: {
+      titulo: '🎯 Módulo 5: O seu futuro na segurança cibernética?',
+      desc: 'Carreiras em cibersegurança, certificações (CompTIA Security+, CEH, CISSP), próximos passos na área.'
+    }
+  };
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const modulo = card.getAttribute('data-modulo');
+      modalTitulo.innerText = modulosDetalhes[modulo].titulo;
+      modalDesc.innerText = modulosDetalhes[modulo].desc;
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Georgia', serif;
+      background-image: url('BR_blanco.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #4a3728;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Overlay suave para contraste */
+    .overlay {
+      background-color: rgba(245, 240, 232, 0.85);
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Cabeçalho */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: rgba(255, 252, 248, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #5c3d2e;
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      color: #8b6b4f;
+      font-style: italic;
+    }
+
+    /* Navegação */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0 30px;
+    }
+
+    .nav-btn {
+      background: #e8ddd0;
+      border: none;
+      padding: 10px 28px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #5c3d2e;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .nav-btn:hover {
+      background: #d6c8b8;
+      transform: translateY(-2px);
+    }
+
+    .nav-btn.ativo {
+      background: #b8956e;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Páginas */
+    .pagina {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .pagina.ativa {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards dos módulos */
+    .cards-modulos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 252, 248, 0.95);
+      border-radius: 20px;
+      padding: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid #e2d8cd;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+      border-color: #b8956e;
+    }
+
+    .card h3 {
+      color: #5c3d2e;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #8b735f;
+      font-size: 0.9rem;
+    }
+
+    .card-badge {
+      display: inline-block;
+      background: #e8ddd0;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      margin-bottom: 12px;
+      color: #5c3d2e;
+    }
+
+    /* Modal de detalhe do módulo */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #fef9f0;
+      max-width: 500px;
+      width: 90%;
+      padding: 30px;
+      border-radius: 24px;
+      position: relative;
+      animation: fadeIn 0.3s;
+      border: 1px solid #d9c7b0;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #b8956e;
+    }
+
+    .modal h2 {
+      color: #5c3d2e;
+      margin-bottom: 15px;
+    }
+
+    /* Seção início */
+    .inicio-texto {
+      background: rgba(255, 252, 248, 0.95);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      color: #8b6b4f;
+      font-size: 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 20px;
+      color: #b2a187;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 1.8rem; }
+      .nav-btn { padding: 6px 18px; }
+    }
+  
+
+  h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ded3c4;
+    color: #5c3d2e;
+    font-weight: 500;
+  }
+  ul {
+    margin: 20px 0;
+  }
+  li {
+    margin: 8px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  th {
+    background-color: #f7f2ea;
+    color: #5c3d2e;
+    font-weight: 500;
+  }
