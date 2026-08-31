@@ -47,4 +47,4 @@ Este projeto foi desenvolvido com fins educacionais, como parte do processo de a
 
 ---
 
-📫 **Contato:** *[seu nome / LinkedIn / e-mail, se desejar incluir]*
+📫 **Contato:** *Rayara Escala_rayat266.github.io/*
